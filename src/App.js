@@ -1,8 +1,8 @@
 import React from 'react';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
-import Dashboard from "./pages/dashboard";
-import Expenses from "./pages/expenses";
+import DashboardContainer from "./containers/dashboardContainer";
+import ExpensesContainer from "./containers/expensesContainer";
 import './App.css';
 
 const client = new ApolloClient({
@@ -13,8 +13,8 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <Dashboard />
-        <Expenses />
+        <DashboardContainer />
+        <ExpensesContainer />
       </div>
     </ApolloProvider>
   );
